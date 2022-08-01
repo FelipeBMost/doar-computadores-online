@@ -1,15 +1,161 @@
+.buttonSearch, .buttonSubmit {
+  text-align: center;
+  padding: 10px;
+  width: 110px;
+  cursor: pointer;
+  background-color: black;
+  color: white;
+  font-size: 1.25rem;
+  border-radius: 5px;
+  align-self: center;
+  justify-self: center;
+}
+
+.buttonSubmit {
+  float: right;
+  margin-bottom: 50px;
+}
+
+.buttonSearch:active, .buttonSubmit:active{
+  background-color: #222;
+}
+
 .container {
-  padding: 0 2rem;
+  padding: 2rem 0;
+}
+
+.containerTwoColumns, .containerTwoColumnsZip {
+  display: grid;
+  grid-template-columns: auto auto;
+  width: 100%;
+  align-items: center;
+}
+
+.containerTwoColumnsZip {
+  width: 40%;
+}
+
+.containerThreeColumns {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+#deviceCount {
+  display: block;
+}
+
+#deviceCount > input {
+  width: 70px;
+  margin-left: 20px;
+}
+
+.fieldset {
+  margin-bottom: 40px;
+  border: none;
+  border-radius: 30px;
+  background-color: rgba(0, 0, 0, 0.664);
+}
+
+.legend {
+  font-size: 1.3rem;
+  font-weight: 500;
+}
+
+.hero {
+  width: 80%;
+  max-width: 1200px;
+}
+
+.group {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  column-gap: 20px;
+  font-size: 1.2rem;
+  margin: 30px 30px;
+}
+
+.group > input {
+  padding: 10px;
+  height: 35px;
+  border-radius: 10px;
+}
+
+.group > select {
+  padding: 10px;
+  height: 35px;
+  border-radius: 10px;
+}
+
+.group > select[type='number'] {
+  width: 40px;
 }
 
 .main {
   min-height: 100vh;
-  padding: 4rem 0;
+  padding: 1rem 0;
   flex: 1;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+.modalBackground {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  z-index: 10;
+  background: rgba(0, 0, 0, 0.685)
+}
+
+.modalBoxSuccess {
+  font-size: 1.5rem;
+  max-width: 50%;
+  padding: 5%;
+  margin-top: -10%;
+  border-radius: 20px;
+  line-height: 2.5rem;
+  background-color: #0416b9;
+}
+
+.modalBoxFailure {
+  font-size: 1.5rem;
+  max-width: 50%;
+  padding: 5%;
+  margin-top: -10%;
+  border-radius: 20px;
+  line-height: 2.5rem;
+  background-color: rgb(180, 49, 1);
+}
+
+.form {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1200px;
+}
+
+.spinner {
+  padding: 10px;
+  margin: 0;
+}
+
+.notFound {
+  position: absolute;
+  top: 55px;
+  margin: 10px 20px;
+  color: red;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
 }
 
 .footer {
@@ -40,9 +186,9 @@
 }
 
 .title {
-  margin: 0;
+  margin: 0 0 50px;
   line-height: 1.15;
-  font-size: 4rem;
+  font-size: 3rem;
 }
 
 .title,
